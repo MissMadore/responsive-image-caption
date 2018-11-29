@@ -5,9 +5,12 @@
 @viewport { width: device-width; scale: 1; }
 
 html {
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
   box-sizing: border-box;
   font: normal 100%/1.3 Georgia, serif;
-
 }
 
 *, *::before, *::after {
@@ -23,21 +26,63 @@ figure {
   background-color: #e2e2e2;
 }
 
-.image {
+.img-flex {
   width: 100%;
-  margin-bottom: 1rem;
+  display: block;
 }
 
 .caption {
- margin: 0;
- padding: 0 1.3rem 1.3rem;
+  margin: 0;
+  padding: 1.3rem;
 }
 
 .caption h2 {
   font-family: "Denk One", sans-serif;
+  font-size: 1.5rem;
   margin: 0 0 1.3rem;
 }
 
 .caption p {
   margin: 0;
+}
+
+@media only screen and (min-width: 38em) {
+
+  html {
+    font-size: 110%;
+    line-height: 1.4;
+  }
+
+  figure {
+    position: relative;
+    background-color: #fff;
+  }
+
+  .caption {
+    background-color: rgba(0, 0, 0, .3);
+    color: #fff;
+    border-radius: 8px;
+    position: absolute;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    max-width: 20em;
+    padding: 1.3rem;
+  }
+
+}
+
+@media only screen and (min-width: 60em) {
+
+  html {
+    font-size: 120%;
+    line-height: 1.5;
+  }
+
+}
+
+@media only screen and (min-width: 90em) {
+
+  html {
+    font-size: 130%;
+  }
 }
